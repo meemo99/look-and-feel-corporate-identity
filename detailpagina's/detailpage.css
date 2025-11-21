@@ -14,20 +14,15 @@ body {
 .header-banner {
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: 95px;
   width: 100%;
   background-color: #EBDAC5;
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.296);
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  position: fixed;
-  z-index: 2;
+
 }
 
-.introduction {
-    height: 80px;
-    position: relative;
-}
 
 h1 {
     font-size: clamp(2.25rem, 1.0141rem + 5.0704vw, 4.5rem);
