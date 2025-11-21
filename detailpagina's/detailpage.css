@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -19,21 +25,18 @@ body {
 }
 
 .introduction {
-    background-color: white;
     height: 80px;
     position: relative;
 }
 
 h1 {
-    font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
-  font-weight: 600;
-  font-size: 25px;
+    font-size: clamp(2.25rem, 1.0141rem + 5.0704vw, 4.5rem);
+    font-weight: 600;
   text-transform: uppercase;
   margin: 10px;
 }
 
 h2 {
-    font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
   font-weight: 600;
   font-size: 35px;
   margin: 10px;
@@ -41,7 +44,6 @@ h2 {
 }
 
 p {
-  font-family: 'Merriweather',serif;
    font-style: normal;
   font-weight: 400;
   line-height: 1.4;
@@ -71,7 +73,9 @@ p {
 @media screen and (min-width: 961px) {
     grid-area: 1 / 1 / 2 / 2; 
     width: 80%;
-    height: 45%;
+    height: 308px;
+    object-fit: cover;
+    object-position: center;
 }
 }
 
@@ -102,7 +106,7 @@ p {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
-    color: #EAE9E7;
+    color: var(--color-text-primary);
 }
 
 .process{

@@ -1,57 +1,41 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: var(--color-text-secondary);
 }
 
-.header-banner {
+.header-banner{
+  background: var(--color-secondary);
   display: flex;
   flex-direction: row;
-  height: 80px;
+  position: relative;
+  height: 95px;
   width: 100%;
-  background-color: #EBDAC5;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.296);
 }
 
-
-h1 {
-  font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
-  font-weight: 600;
-  margin: 10px;
-  text-transform: uppercase;
-}
-
-
-
-a {
-  text-decoration: none;
-  font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
-  font-weight: 400;
-}
-
-
-
-
-.introduction {
-  background-color: white;
+.introduction{
+  background-color: var(--color-text-primary);
   padding-left: 12px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  color: #5a7ab6;
 
-  @media screen and (min-width: 961px) {
+    @media screen and (min-width: 961px) {
     flex-direction: row;
     justify-content: space-between;
     padding-right: 380px;
-    max-width: 130ch;
     height: 80px;
   }
-
 }
 
 .CID-logo { 
@@ -61,10 +45,37 @@ a {
 }
 
 
+h1 {
+  font-size: clamp(2.25rem, 1.0141rem + 5.0704vw, 4.5rem);
+  font-weight: 600;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 1.1127rem + 0.5634vw, 1.5rem);
+  font-weight: var(--font-weight-light);
+  max-width: 75ch;
+  color: var(--color-highlight);
+  margin-top: 10px;
+}
+
+h3{
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+
 .case-studies {
-  background:#0d3951;
+  background: var(--color-primary);
+  box-shadow: 0px -3px 5px -1px rgba(0, 0, 0, 0.296);
   padding: 10px;
   display: grid;
+  justify-content: center;
+  align-items: start;
   grid-template-columns: 1fr;
   row-gap: 10px;
 
@@ -77,12 +88,13 @@ a {
   }
 }
 
+
 .card{  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  background-color: #EBDAC5;
+  background-color: var(--color-secondary);
   margin: 12px;
   padding: 0.5em;
   border-radius: 5px;
@@ -92,74 +104,77 @@ a {
 }
 
 
-
 .card-img {
   border-radius: 5px;
   height: 160px;
-  width: 300px;
+  width: 275px;
   object-fit: cover;
   object-position: center;
+  margin-bottom: 5px;
+}
+.card{
+  transition: transform 0.4s ease;
 }
 
+.card:hover{
+  transform: scale(1.1);
+}
 .content {
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
-  color: black;
+  color: var(--color-text-secondary);
 }
-
-
 
 .tags {
   display: flex;
   flex-flow: row wrap;
-  margin: 10px;
   gap: 10px;
-  color: white;
-  font-family: 'Geomanist,Helvetica Neue,Helvetica,sans-serif';
-  font-size: 13px;
   line-height: 1;
 }
 
 
 .process{
   display: flex;
-  background-color: #287999;
-  border-radius: 10px;
+  background-color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        color: var(--color-text-primary);
   height: 20px;
-  width: auto;
+
   padding: 4px;
   box-shadow: 0 3px 0 rgba(7,7,33,.15);
   justify-content: center;
   align-items: center;
-  font-weight: 600;
+  font-size: 14px;
+  
 }
 
 .participatie {
   display: flex;
-  background-color: #D13476;
-  border-radius: 10px;
+ background-color: var(--color-tertiary);
+        border: 2px solid var(--color-tertiary); 
+        color: var(--color-text-primary);
   height: 20px;
   width: auto;
   padding: 4px;
   box-shadow: 0 3px 0 rgba(7,7,33,.15);
   justify-content: center;
   align-items: center;
-  font-weight: 600;
+font-size: 14px;
 }
 
 .uitvoering {
   display: flex;
-  background-color: #75277C;
-  border-radius: 10px;
+  background-color: var(--color-highlight);
+        color: var(--color-text-secondary);
+        border: 2px solid var(--color-highlight);
+
   height: 20px;
   width: auto;
   padding: 4px;
   box-shadow: 0 3px 0 rgba(7,7,33,.15);
   justify-content: center;
   align-items: center;
-  font-weight: 600;
+font-size: 14px;
 }
-
 
