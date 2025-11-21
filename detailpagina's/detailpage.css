@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #0d3951;
+}
+
+.header-banner {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  width: 100%;
+  background-color: #EBDAC5;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  z-index: 2;
+}
+
+.introduction {
+    background-color: white;
+    height: 80px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+h2 {
+    font-family: 'Geomanist, Helvetica Neue, Helvetica', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 10px;
+    color: white;
+}
+
+p {
+  font-family: 'Merriweather',serif;
+   font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.details {
+  
+    @media screen and (min-width: 961px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 5px;
+    }
+}
+
+.casestudy-img {
+    display: flex;
+    justify-content: center;
+    border-radius: 35px;
+    width: 310px;
+    
+    object-fit: cover;
+    object-position: center;
+    margin: 12px;
+    padding: 13px;
+
+@media screen and (min-width: 961px) {
+    grid-area: 1 / 1 / 2 / 2; 
+    width: 80%;
+    height: 45%;
+}
+}
+
+.beschrijving {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (min-width: 961px) {
+    grid-area: 1 / 2 / 2 / 3; 
+    }
+}
+
+.content {
+    font-size: large;
+    background-color: white;
+    border-radius: 25px;
+    padding: 13px;
+    margin: 12px;
+
+    @media screen and (min-width: 961px) {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    color: #EAE9E7;
+}
+
+.process{
+  
+    align-content: center;
+    justify-content: center;
+}
+.participatie {
+    
+    align-content: center;
+    justify-content: center;
+}
+.uitvoering{
+    align-content: center;
+    justify-content: center;
+}
