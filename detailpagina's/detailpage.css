@@ -72,13 +72,19 @@ p {
     object-fit: cover;
     object-position: center;
 }
+
 }
+
+
 
 .beschrijving {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+     position: relative;
+  z-index: 1;
+  padding: 4rem;
     @media screen and (min-width: 961px) {
     grid-area: 1 / 2 / 2 / 3; 
     }
@@ -114,6 +120,7 @@ p {
     align-content: center;
     justify-content: center;
 }
+
 .uitvoering{
     align-content: center;
     justify-content: center;

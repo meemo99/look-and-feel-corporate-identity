@@ -12,14 +12,27 @@ body {
 
 .header-banner{
   background: var(--color-secondary);
+  padding-top: 15px;
   display: flex;
   flex-direction: row;
+  align-content: center;
   position: relative;
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.296);
+
+  @media screen and (min-width: 481px) {
   height: 95px;
   width: 100%;
-  align-items: center;
+  /* padding-top: 15px; */
+  align-content: center;
   justify-content: center;
-  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.296);
+  }
+
+  @media screen and (min-width: 961px) {
+  height: 92px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  }
 }
 
 .introduction{
@@ -29,26 +42,28 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  
 
     @media screen and (min-width: 961px) {
     flex-direction: row;
     justify-content: space-between;
     padding-right: 380px;
-    height: 80px;
+    height: auto;
   }
 }
 
 .CID-logo { 
   padding-right: 45px;
+  padding-left: 15px;
   height: 110px;
-  width: 290px;
+  width: 410px;
 }
 
 
 h1 {
   font-size: clamp(2.25rem, 1.0141rem + 5.0704vw, 4.5rem);
   font-weight: 600;
-  margin: 10px;
+
   text-transform: uppercase;
 }
 
@@ -58,6 +73,7 @@ h2 {
   max-width: 75ch;
   color: var(--color-highlight);
   margin-top: 10px;
+  line-height: 1.4;
 }
 
 h3{
@@ -74,8 +90,6 @@ a {
   box-shadow: 0px -3px 5px -1px rgba(0, 0, 0, 0.296);
   padding: 10px;
   display: grid;
-  justify-content: center;
-  align-items: start;
   grid-template-columns: 1fr;
   row-gap: 10px;
 
@@ -89,16 +103,14 @@ a {
 }
 
 
-.card{  
+ .card{  
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: baseline;
   background-color: var(--color-secondary);
   margin: 12px;
   padding: 0.5em;
   border-radius: 5px;
-  max-width: 300px;
+  max-width: 480px;
   height: 320px;
   box-shadow: 0.125rem 0 0 rgba(7,7,33,.15);
 }
@@ -107,11 +119,12 @@ a {
 .card-img {
   border-radius: 5px;
   height: 160px;
-  width: 275px;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   margin-bottom: 5px;
-}
+} 
+
 .card{
   transition: transform 0.4s ease;
 }
